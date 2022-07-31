@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  user-select: none;
   
 }
 
@@ -56,4 +57,19 @@
 .today{
   background-color: red;
 
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  width: 10rem;
+  align-items: center;
+ 
+}
+.header p {
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.arrow {
+  font-size: 1.5rem;
+  cursor: pointer;
 }

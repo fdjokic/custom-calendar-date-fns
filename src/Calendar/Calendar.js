@@ -51,11 +51,23 @@ const Calendar = () => {
   const currentMothYear = () => {
     return value.format("MMMM") + " " + value.format("YYYY");
   };
+  const prevMonth = () => {
+    return value.clone().subtract(1, "month");
+  };
+  const nextMonth = () => {
+    return value.clone().add(1, "month");
+  };
 
   return (
     <div className="calendar">
       <div className="header">
-        <div>{currentMothYear()}</div>
+        <div className="arrow" onClick={() => setValue(prevMonth)}>
+          {String.fromCharCode(171)}
+        </div>
+        <p>{currentMothYear()}</p>
+        <div className="arrow" onClick={() => setValue(nextMonth)}>
+          {String.fromCharCode(187)}
+        </div>
       </div>
       <div className="days">
         {value._locale._weekdaysMin.map((day, idx) => (
