@@ -4,7 +4,7 @@ import "../index.css";
 
 const Calendar = () => {
   const [calendar, setCalendar] = useState([]);
-  const [value, setValue] = useState(moment());
+  const [value, setValue] = useState(moment().utc());
   const startDay = value.clone().startOf("month").startOf("week");
   const endDay = value.clone().endOf("month").endOf("week");
   const endYear = value
@@ -57,6 +57,7 @@ const Calendar = () => {
   const nextMonth = () => {
     return value.clone().add(1, "month");
   };
+  console.log(value, value.toISOString());
 
   return (
     <div className="calendar">
