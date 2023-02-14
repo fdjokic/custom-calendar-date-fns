@@ -4,7 +4,7 @@ import Calendy from "./Calendy";
 
 function App() {
   const [value, setValue] = useState(new Date());
-  const [type, setType] = useState("daily");
+  const [type, setType] = useState("weekly");
   console.log(type);
   return (
     <div className="App">

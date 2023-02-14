@@ -24,15 +24,6 @@ const Calendy = ({ type, selectedDate, setSelectedDate }) => {
   const getHeader = () => {
     return (
       <div class="header">
-        <div
-          className="todayButton"
-          onClick={() => {
-            setSelectedDate(new Date());
-            setActiveDate(new Date());
-          }}
-        >
-          Today
-        </div>
         <span
           className="navIcon"
           onClick={() => setActiveDate(subMonths(activeDate, 1))}
